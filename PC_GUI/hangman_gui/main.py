@@ -13,6 +13,7 @@ pygame.mixer.music.play(-1)
 
 puzzlesSolved = 0  # should not be reset to zero when rerunning from game start
 
+
 # first run window
 def submitButton():
     Input = user_input.get()
@@ -21,10 +22,14 @@ def submitButton():
         inputLabel.destroy()
         inputBox.destroy()
         sub_btn.destroy()
+        wordSelect()
     elif Input == "N":
         exit()
 
+
 def restart():
+    global correctGuess
+    global incorrectGuess
     Input = user_input.get()
     if Input == 'Y':
         newGame.destroy()
@@ -32,8 +37,12 @@ def restart():
         inputBox.destroy()
         sub_btn.destroy()
         endGame.destroy()
+        correctGuess = 0
+        incorrectGuess = 0
+        wordSelect()
     elif Input == "N":
         exit()
+
 
 def wordLogic():
     global incorrectGuess
@@ -45,16 +54,22 @@ def wordLogic():
     global inputBox
     global sub_btn
     global endGame
+    global word
     LETTER = userGuessLetter.get()
     if LETTER not in word:
         incorrectGuess = incorrectGuess + 1
         print(incorrectGuess)
     else:
         print("in word")
-        correctGuess = correctGuess + 1
+        print(correctGuess)
+        x=300
         for j in range(0, len(word)):
             if word[j] == LETTER:
-                exec('d{}.config(text="{}")'.format(j, LETTER.lower()))
+                x +=60
+                correctGuess = correctGuess + 1
+                exec('d{}.config(text="{}")'.format(j, LETTER.upper()))
+                # letterPlace = Label(window, text=LETTER, font=("arial", 60))
+                # letterPlace.place(x=x, y=400)
     if incorrectGuess == 6:
         endGame = Label(window, text="Sorry! The correct word was " + word + "." +
                                      "You have solved" + " " + str(puzzlesSolved) + " puzzles out of 7776",
@@ -73,9 +88,20 @@ def wordLogic():
         sub_btn.place(x=555, y=510)
     elif correctGuess == len(word):
         puzzlesSolved = puzzlesSolved + 1
-        endGame = Label(window, text="Well done! You have solved" + str(puzzlesSolved) + " puzzles out of 7776",
+        endGame = Label(window, text="Well done! You have solved " + str(puzzlesSolved) + " puzzles out of 7776",
                         font=("arial", 35))
         endGame.place(x=0, y=300)
+
+        newGame = Label(window, text="New Game? Enter Y to play or N to leave", font=("arial", 60))
+        newGame.place(x=50, y=400)
+        user_input = tk.StringVar()  # used for storing input
+        inputLabel = tk.Label(window, text="Enter", font=("calibre", 10, "bold"))
+        inputBox = tk.Entry(window, textvariable=user_input, font=("calibre", 10, "normal"))
+        sub_btn = tk.Button(window, text="Submit", command=restart)
+        newGame.place(x=50, y=425)
+        newGame.place(x=50, y=425)
+        inputBox.place(x=530, y=490)
+        sub_btn.place(x=555, y=510)
 
 
 # window creation
@@ -85,7 +111,6 @@ window.title('hangman')
 window.geometry("1200x800")
 window.resizable(False, False)
 window.configure(bg='gray')
-
 
 # asking to start game first run
 newGame = Label(window, text="New Game? Enter Y", font=("arial", 60))
@@ -98,24 +123,25 @@ inputLabel.place(x=500, y=370)
 inputBox.place(x=530, y=370)
 sub_btn.place(x=555, y=390)
 
-# word selection
-index = random.randint(0, 7776)
-file = open('wordlist.txt', 'r')
-lines = file.readlines()
-word = lines[index].strip('\n')
-print(word)
-# creating blanks for word
-x = 300
-for i in range(0, len(word)):
-    x += 60
-    exec('d{}=Label(window,text="_",bg="#E7FFFF",font=("arial",50))'.format(i))
-    exec('d{}.place(x={},y={})'.format(i, x, 700))
+
+def wordSelect():
+    global word
+    # word selection
+    index = random.randint(0, 7776)
+    file = open('wordlist.txt', 'r')
+    lines = file.readlines()
+    word = lines[index].strip('\n')
+    print(word)
+    # creating blanks for word
+    x = 300
+    for i in range(0, len(word)):
+        x += 60
+        exec('d{}=Label(window,text="_",bg="#E7FFFF",font=("arial",50))'.format(i))
+        exec('d{}.place(x={},y={})'.format(i, x, 700))
+
 
 incorrectGuess = 0
 correctGuess = 0
-
-
-
 
 # window for characters
 charFrame = Frame(window)
