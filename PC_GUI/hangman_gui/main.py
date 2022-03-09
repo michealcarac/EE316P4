@@ -1,3 +1,7 @@
+# references
+# https://github.com/openethereum/wordlist
+# https://github.com/carlmas02/Hangman-Game/blob/main/main.py
+
 import tkinter
 from tkinter import *
 import tkinter as tk
@@ -43,12 +47,11 @@ def restart():
         inputBox.destroy()
         sub_btn.destroy()
         endGame.destroy()
-        print("restart")
+        word_label.destroy()
         correctGuess = 0
         incorrectGuess = 0
         num = 1
         hangManPic.configure(image=picsList[1])
-        word_label.destroy()
         wordSelect()
 
 
@@ -72,18 +75,17 @@ def wordLogic():
     global word
     global num
     global wordHidden
-    global word_label
     global attempts
 
-    LETTER = userGuessLetter.get()
+    LETTER = userGuessLetter.get().lower()
     if LETTER not in word:
         incorrectGuess = incorrectGuess + 1
         hangManPic.configure(image=picsList[num])
         num += 1
-        print(incorrectGuess)
+        # print(incorrectGuess)
     else:
-        print("in word")
-        print(correctGuess)
+        # print("in word")
+        # print(correctGuess)
 
         for j in range(0, len(word)):
             if word[j] == LETTER:
@@ -153,7 +155,7 @@ def chars():
     # window for characters
     charFrame = Frame(window)
     charFrame.pack()
-    labelFrame = Label(charFrame, text="Enter lowercase a character : ")
+    labelFrame = Label(charFrame, text="Enter a letter : ")
     labelFrame.pack(side=LEFT)
 
     # box
@@ -161,7 +163,7 @@ def chars():
     userGuessLetter.pack(side=RIGHT)
 
     # button for entering
-    button = Button(window, text="Check", bd=4, activeforeground="white", command=wordLogic, relief=RAISED)
+    button = Button(window, text="Check", bd=4, activeforeground="blue", command=wordLogic)
     button.pack()
 
 
