@@ -11,9 +11,9 @@ import pygame
 import random
 
 # music for no reason
-# pygame.mixer.init()
-# pygame.mixer.music.load("wii_music.mp3")
-# pygame.mixer.music.play(-1)
+pygame.mixer.init()
+pygame.mixer.music.load("wii_music.mp3")
+pygame.mixer.music.play(-1)
 
 
 puzzlesSolved = 0  # should not be reset to zero when rerunning from game start
@@ -41,6 +41,10 @@ def restart():
     global num
     Input = user_input.get()
     if Input == 'Y':
+        pygame.mixer.stop()
+        pygame.mixer.init()
+        pygame.mixer.music.load("wii_music.mp3")
+        pygame.mixer.music.play(-1)
         word_label.destroy()
         newGame.destroy()
         inputLabel.destroy()
@@ -48,6 +52,8 @@ def restart():
         sub_btn.destroy()
         endGame.destroy()
         word_label.destroy()
+        word_label = Label(window, text="_", font=("arial", 50, "bold"))
+        word_label.place(x=445, y=700)
         correctGuess = 0
         incorrectGuess = 0
         num = 1
@@ -96,6 +102,10 @@ def wordLogic():
         word_label.place(x=445, y=700)
 
         if "_" not in wordHidden:
+            pygame.mixer.stop()
+            pygame.mixer.init()
+            pygame.mixer.music.load("wii_music_2.mp3")
+            pygame.mixer.music.play(-1)
             puzzlesSolved = puzzlesSolved + 1
             attempts = attempts + 1
             endGame = Label(window, text="Well done! You have solved the word " + '"' + word + '"' + ". " + str(
