@@ -13,6 +13,7 @@ import random
 
 
 puzzlesSolved = 0  # should not be reset to zero when rerunning from game start
+attempts = 0
 
 
 # first run window
@@ -72,6 +73,7 @@ def wordLogic():
     global num
     global wordHidden
     global word_label
+    global attempts
 
     LETTER = userGuessLetter.get()
     if LETTER not in word:
@@ -93,9 +95,12 @@ def wordLogic():
 
         if "_" not in wordHidden:
             puzzlesSolved = puzzlesSolved + 1
-            endGame = Label(window, text="Well done! You have solved " + str(puzzlesSolved) + " puzzles out of 7776",
-                            font=("arial", 35))
-            endGame.place(x=50, y=300)
+            attempts = attempts + 1
+            endGame = Label(window, text="Well done! You have solved the word " + '"' + word + '"' + ". " + str(
+                puzzlesSolved) + " puzzles solved out of" + " " + str(
+                attempts) + " " + "rounds, with 7776 puzzles total",
+                            font=("arial", 25))
+            endGame.place(x=0, y=300)
 
             newGame = Label(window, text="New Game? Enter Y to play or N to leave", font=("arial", 60))
             newGame.place(x=50, y=400)
@@ -107,13 +112,14 @@ def wordLogic():
             newGame.place(x=50, y=425)
             inputBox.place(x=530, y=495)
             sub_btn.place(x=555, y=517)
-            word_label.destroy()
 
     if incorrectGuess == 6:
-        endGame = Label(window, text="Sorry! The correct word was " + word + "." +
-                                     "You have solved" + " " + str(puzzlesSolved) + " puzzles out of 7776",
-                        font=("arial", 30))
-        endGame.place(x=50, y=300)
+        attempts = attempts + 1
+        endGame = Label(window, text="Sorry! The correct word was " + '"' + word + '"' + "." + " " +
+                                     "You have solved" + " " + str(
+            puzzlesSolved) + " puzzles solved out of" + " " + str(attempts) + " " + "rounds, with 7776 puzzles total",
+                        font=("arial", 23))
+        endGame.place(x=0, y=300)
 
         newGame = Label(window, text="New Game? Enter Y to play or N to leave", font=("arial", 60))
         newGame.place(x=50, y=400)
@@ -125,7 +131,6 @@ def wordLogic():
         newGame.place(x=50, y=425)
         inputBox.place(x=530, y=490)
         sub_btn.place(x=555, y=510)
-        word_label.destroy()
 
 
 def wordSelect():
