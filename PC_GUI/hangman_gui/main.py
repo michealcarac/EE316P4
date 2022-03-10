@@ -12,9 +12,8 @@ import random
 
 # music for no reason
 pygame.mixer.init()
-pygame.mixer.music.load("wii_music.mp3")
+pygame.mixer.music.load("wii_music_4.mp3")
 pygame.mixer.music.play(-1)
-
 
 puzzlesSolved = 0  # should not be reset to zero when rerunning from game start
 attempts = 0
@@ -22,6 +21,9 @@ attempts = 0
 
 # first run window
 def submitButton():
+    pygame.mixer.init()
+    pygame.mixer.music.load("wii_music.mp3")
+    pygame.mixer.music.play(-1)
     Input = user_input.get()
     if Input == 'Y':
         newGame.destroy()
@@ -39,6 +41,8 @@ def restart():
     global incorrectGuess
     global word_label
     global num
+    global wordHidden
+
     Input = user_input.get()
     if Input == 'Y':
         pygame.mixer.stop()
@@ -47,17 +51,17 @@ def restart():
         pygame.mixer.music.play(-1)
         word_label.destroy()
         newGame.destroy()
+        del wordHidden
+        word_label = tk.Label(window)
+        word_label.place(x=445, y=700)
         inputLabel.destroy()
         inputBox.destroy()
         sub_btn.destroy()
         endGame.destroy()
-        word_label.destroy()
-        word_label = Label(window, text="_", font=("arial", 50, "bold"))
-        word_label.place(x=445, y=700)
         correctGuess = 0
         incorrectGuess = 0
         num = 1
-        hangManPic.configure(image=picsList[1])
+        hangManPic.configure(image=picsList[0])
         wordSelect()
 
 
@@ -112,7 +116,7 @@ def wordLogic():
                 puzzlesSolved) + " puzzles solved out of" + " " + str(
                 attempts) + " " + "rounds, with 7776 puzzles total",
                             font=("arial", 25))
-            endGame.place(x=0, y=300)
+            endGame.place(x=20, y=300)
 
             newGame = Label(window, text="New Game? Enter Y to play or N to leave", font=("arial", 60))
             newGame.place(x=50, y=400)
@@ -126,12 +130,16 @@ def wordLogic():
             sub_btn.place(x=555, y=517)
 
     if incorrectGuess == 6:
+        pygame.mixer.stop()
+        pygame.mixer.init()
+        pygame.mixer.music.load("wii_music_3.mp3")
+        pygame.mixer.music.play(-1)
         attempts = attempts + 1
         endGame = Label(window, text="Sorry! The correct word was " + '"' + word + '"' + "." + " " +
                                      "You have solved" + " " + str(
             puzzlesSolved) + " puzzles solved out of" + " " + str(attempts) + " " + "rounds, with 7776 puzzles total",
                         font=("arial", 23))
-        endGame.place(x=0, y=300)
+        endGame.place(x=20, y=300)
 
         newGame = Label(window, text="New Game? Enter Y to play or N to leave", font=("arial", 60))
         newGame.place(x=50, y=400)
@@ -167,11 +175,9 @@ def chars():
     charFrame.pack()
     labelFrame = Label(charFrame, text="Enter a letter : ")
     labelFrame.pack(side=LEFT)
-
     # box
     userGuessLetter = Entry(charFrame, bd=5)
     userGuessLetter.pack(side=RIGHT)
-
     # button for entering
     button = Button(window, text="Check", bd=4, activeforeground="blue", command=wordLogic)
     button.pack()
@@ -187,7 +193,7 @@ window.title('hangman')
 # window.configure(width=1200, height=800)
 window.geometry("1200x800")
 window.resizable(False, False)
-window.configure(bg='gray')
+window.configure(bg="black")
 
 # pics
 hangman0 = PhotoImage(file="hangman0.png")
@@ -212,6 +218,6 @@ inputBox = tk.Entry(window, textvariable=user_input, font=("arial", 10, "normal"
 sub_btn = tk.Button(window, text="Submit", command=submitButton)
 inputLabel.place(x=500, y=370)
 inputBox.place(x=530, y=370)
-sub_btn.place(x=555, y=394)
+sub_btn.place(x=555, y=393)
 
 window.mainloop()
