@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Keyboard_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Keyboard_wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="16913444000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="210"></NameColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject type="logic" fp_name="/Keyboard_wrapper/clk_0">
+      <obj_property name="ElementShortName">clk_0</obj_property>
+      <obj_property name="ObjectShortName">clk_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Keyboard_wrapper/ps2_clk_0">
+      <obj_property name="ElementShortName">ps2_clk_0</obj_property>
+      <obj_property name="ObjectShortName">ps2_clk_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Keyboard_wrapper/ps2_data_0">
+      <obj_property name="ElementShortName">ps2_data_0</obj_property>
+      <obj_property name="ObjectShortName">ps2_data_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Keyboard_wrapper/reset_0">
+      <obj_property name="ElementShortName">reset_0</obj_property>
+      <obj_property name="ObjectShortName">reset_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Keyboard_wrapper/scl_0">
+      <obj_property name="ElementShortName">scl_0</obj_property>
+      <obj_property name="ObjectShortName">scl_0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Keyboard_wrapper/sda_0">
+      <obj_property name="ElementShortName">sda_0</obj_property>
+      <obj_property name="ObjectShortName">sda_0</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Keyboard_wrapper/Keyboard_i/main_0/data_o">
+      <obj_property name="ElementShortName">data_o[127:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Keyboard_wrapper/Keyboard_i/ps2_keyboard_to_ascii_0/ascii_code">
+      <obj_property name="ElementShortName">ascii_code[6:0]</obj_property>
+      <obj_property name="ObjectShortName">ascii_code[6:0]</obj_property>
+   </wvobject>
+</wave_config>

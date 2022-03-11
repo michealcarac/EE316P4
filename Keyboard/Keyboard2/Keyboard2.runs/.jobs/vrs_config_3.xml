@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Keyboard_clk_wiz_1_0_synth_1" LaunchDir="/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.runs/Keyboard_clk_wiz_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Keyboard_ps2_keyboard_to_ascii_0_0_synth_1" LaunchDir="/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.runs/Keyboard_ps2_keyboard_to_ascii_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Keyboard_main_0_0_synth_1" LaunchDir="/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.runs/Keyboard_main_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Keyboard_i2c_user_lcd_0_0_synth_1" LaunchDir="/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.runs/Keyboard_i2c_user_lcd_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Keyboard_clk_wiz_0_synth_1" LaunchDir="/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.runs/Keyboard_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Keyboard_clk_wiz_1_0_synth_1"/>
+		<Parent Id="Keyboard_ps2_keyboard_to_ascii_0_0_synth_1"/>
+		<Parent Id="Keyboard_main_0_0_synth_1"/>
+		<Parent Id="Keyboard_i2c_user_lcd_0_0_synth_1"/>
+		<Parent Id="Keyboard_clk_wiz_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Mar 10 20:27:46 2022
+# Process ID: 236009
+# Current directory: /home/spixy/Documents/College/EE316/EE316P4/Keyboard/keyboard/keyboard.runs/synth_2
+# Command line: vivado -log Keyboard_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Keyboard_wrapper.tcl
+# Log file: /home/spixy/Documents/College/EE316/EE316P4/Keyboard/keyboard/keyboard.runs/synth_2/Keyboard_wrapper.vds
+# Journal file: /home/spixy/Documents/College/EE316/EE316P4/Keyboard/keyboard/keyboard.runs/synth_2/vivado.jou
+#-----------------------------------------------------------
+source Keyboard_wrapper.tcl -notrace

@@ -1,0 +1,37 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/spixy/XILINX/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto e7012303170b479ea23cc30466b17460 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Keyboard_wrapper_behav xil_defaultlib.Keyboard_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.Keyboard_clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.Keyboard_clk_wiz_0
+Compiling module xil_defaultlib.Keyboard_clk_wiz_1_0_clk_wiz
+Compiling module xil_defaultlib.Keyboard_clk_wiz_1_0
+Compiling architecture logic of entity xil_defaultlib.i2c_master [\i2c_master(input_clk=100000000,...]
+Compiling architecture behavioral of entity xil_defaultlib.i2c_user_lcd [\i2c_user_lcd(input_clk=10000000...]
+Compiling architecture keyboard_i2c_user_lcd_0_0_arch of entity xil_defaultlib.Keyboard_i2c_user_lcd_0_0 [keyboard_i2c_user_lcd_0_0_defaul...]
+Compiling architecture behavioral of entity xil_defaultlib.main [main_default]
+Compiling architecture keyboard_main_0_0_arch of entity xil_defaultlib.Keyboard_main_0_0 [keyboard_main_0_0_default]
+Compiling architecture logic of entity xil_defaultlib.debounce [\debounce(counter_size=8)\]
+Compiling architecture logic of entity xil_defaultlib.ps2_keyboard [\ps2_keyboard(clk_freq=100000000...]
+Compiling architecture behavior of entity xil_defaultlib.ps2_keyboard_to_ascii [\ps2_keyboard_to_ascii(clk_freq=...]
+Compiling architecture keyboard_ps2_keyboard_to_ascii_0_0_arch of entity xil_defaultlib.Keyboard_ps2_keyboard_to_ascii_0_0 [keyboard_ps2_keyboard_to_ascii_0...]
+Compiling architecture structure of entity xil_defaultlib.Keyboard [keyboard_default]
+Compiling architecture structure of entity xil_defaultlib.keyboard_wrapper
+Built simulation snapshot Keyboard_wrapper_behav

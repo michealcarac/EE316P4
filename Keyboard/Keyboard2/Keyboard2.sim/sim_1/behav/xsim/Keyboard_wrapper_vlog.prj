@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Keyboard2.srcs/sources_1/bd/Keyboard/ipshared/c923" \
+"../../../../Keyboard2.srcs/sources_1/bd/Keyboard/ip/Keyboard_clk_wiz_0/Keyboard_clk_wiz_0_clk_wiz.v" \
+"../../../../Keyboard2.srcs/sources_1/bd/Keyboard/ip/Keyboard_clk_wiz_0/Keyboard_clk_wiz_0.v" \
+"../../../../Keyboard2.srcs/sources_1/bd/Keyboard/ip/Keyboard_clk_wiz_1_0/Keyboard_clk_wiz_1_0_clk_wiz.v" \
+"../../../../Keyboard2.srcs/sources_1/bd/Keyboard/ip/Keyboard_clk_wiz_1_0/Keyboard_clk_wiz_1_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

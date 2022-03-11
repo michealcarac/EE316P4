@@ -13,6 +13,7 @@ entity i2c_user_lcd is
 		reset_n     : in    std_logic;                     	--active-low reset
 		selectMode	: in    std_logic_vector(3 downto 0); 	-- 00 = LDR, 01 = TEMP, 10 = ANALOG, 11 = POT
 		clockOutput : in    std_logic;   					-- 0 = Blank, 1 = Display "Clock Output"
+		data_i      : in    std_logic_vector(127 downto 0); -- To be displayed (In ASCII format already)
 
 		-- INOUT
 		sda      	: inout std_logic;                     	--i2c data
@@ -200,7 +201,8 @@ architecture behavioral of i2c_user_lcd is
 	-- First Line  --
 	-- This part is editable for custom messages --
 	-- Text: "----LDR-(A0)----", - = space
-	first_line(0)     <= x"20" & x"20" & x"20" & x"20" & x"4C" & x"44" & x"52" & x"20" & x"28" & x"41" & x"30" & x"29" & x"20" & x"20" & x"20" & x"20";
+	--first_line(0)     <= x"20" & x"20" & x"20" & x"20" & x"4C" & x"44" & x"52" & x"20" & x"28" & x"41" & x"30" & x"29" & x"20" & x"20" & x"20" & x"20";
+	first_line(0)     <= data_i;
 	-- Text: "----TEMP-(A1)---", - = space
 	first_line(1)     <= x"20" & x"20" & x"20" & x"20" & x"54" & x"45" & x"4D" & x"50" & x"20" & x"28" & x"41" & x"31" & x"29" & x"20" & x"20" & x"20";
 	-- Text: "---ANALOG-(A2)--", - = space
