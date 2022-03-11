@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7z010clg400-1" LaunchTime="1646962063">
-  <File Type="VDS-TIMING-PB" Name="Keyboard_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Keyboard_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="Keyboard_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Keyboard_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Keyboard_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Keyboard_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Keyboard_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="Keyboard_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="Keyboard_wrapper.tcl"/>
+<GenRun Id="synth_2" LaunchPart="xc7z010clg400-1" LaunchTime="1646963946">
+  <File Type="PA-TCL" Name="ps2_keyboard_to_ascii.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="ps2_keyboard_to_ascii_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="ps2_keyboard_to_ascii_reports.tcl"/>
+  <File Type="RDS-RDS" Name="ps2_keyboard_to_ascii.vds"/>
+  <File Type="RDS-UTIL" Name="ps2_keyboard_to_ascii_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ps2_keyboard_to_ascii_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="ps2_keyboard_to_ascii.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="ps2_keyboard_to_ascii_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="ps2_keyboard_to_ascii_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../debounce.vhd">
@@ -29,43 +29,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/Keyboard/Keyboard.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/Keyboard/hdl/Keyboard_wrapper.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../I2C_LCD/I2C_Master.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../I2C_LCD/i2c_user_lcd.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/main.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Keyboard_wrapper"/>
+      <Option Name="TopModule" Val="ps2_keyboard_to_ascii"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -92,6 +59,4 @@
       <Option Id="FlattenHierarchy">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Keyboard_system_ila_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Keyboard_ps2_keyboard_to_ascii_0_0"/>
 </GenRun>

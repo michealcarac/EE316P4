@@ -1,0 +1,7 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+ERROR: Index -1 out of bound 127 downto 0
+Time: 1136 ns  Iteration: 0  Process: /wrapper/line__81
+  File: C:/Users/sixpe/Documents/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/new/wrapper.vhd
+
+HDL Line: C:/Users/sixpe/Documents/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/new/wrapper.vhd:87

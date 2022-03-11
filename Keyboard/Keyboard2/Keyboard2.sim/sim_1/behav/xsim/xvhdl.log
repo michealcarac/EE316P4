@@ -1,18 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/main.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'main'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/debounce.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'debounce'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/ps2_keyboard.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ps2_keyboard'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ps2_keyboard_to_ascii'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/bd/Keyboard/ip/Keyboard_main_0_0/sim/Keyboard_main_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Keyboard_main_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/bd/Keyboard/ip/Keyboard_ps2_keyboard_to_ascii_0_0/sim/Keyboard_ps2_keyboard_to_ascii_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Keyboard_ps2_keyboard_to_ascii_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/bd/Keyboard/ip/Keyboard_i2c_user_lcd_0_0/sim/Keyboard_i2c_user_lcd_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Keyboard_i2c_user_lcd_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/bd/Keyboard/sim/Keyboard.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Keyboard'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/spixy/Documents/College/EE316/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/bd/Keyboard/hdl/Keyboard_wrapper.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Keyboard_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/sixpe/Documents/EE316P4/Keyboard/Keyboard2/Keyboard2.srcs/sources_1/new/wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wrapper'

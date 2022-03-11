@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="common" />
+            <top_module name="wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1119533333fs"></ZoomStartTime>
+      <ZoomEndTime time="1139293334fs"></ZoomEndTime>
+      <Cursor1Time time="1136000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="202"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/wrapper/jb" type="array">
+      <obj_property name="ElementShortName">jb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">jb[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/ja" type="array">
+      <obj_property name="ElementShortName">ja[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ja[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/btn" type="array">
+      <obj_property name="ElementShortName">btn[1:0]</obj_property>
+      <obj_property name="ObjectShortName">btn[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/btn_n" type="logic">
+      <obj_property name="ElementShortName">btn_n</obj_property>
+      <obj_property name="ObjectShortName">btn_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/r0" type="logic">
+      <obj_property name="ElementShortName">r0</obj_property>
+      <obj_property name="ObjectShortName">r0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/r1" type="logic">
+      <obj_property name="ElementShortName">r1</obj_property>
+      <obj_property name="ObjectShortName">r1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/pulse" type="logic">
+      <obj_property name="ElementShortName">pulse</obj_property>
+      <obj_property name="ObjectShortName">pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/selectMode_test" type="array">
+      <obj_property name="ElementShortName">selectMode_test[3:0]</obj_property>
+      <obj_property name="ObjectShortName">selectMode_test[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/clockOutput_test" type="logic">
+      <obj_property name="ElementShortName">clockOutput_test</obj_property>
+      <obj_property name="ObjectShortName">clockOutput_test</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/count" type="other">
+      <obj_property name="ElementShortName">count</obj_property>
+      <obj_property name="ObjectShortName">count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/ascii_code_test" type="array">
+      <obj_property name="ElementShortName">ascii_code_test[6:0]</obj_property>
+      <obj_property name="ObjectShortName">ascii_code_test[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/ascii128_code_test" type="array">
+      <obj_property name="ElementShortName">ascii128_code_test[127:0]</obj_property>
+      <obj_property name="ObjectShortName">ascii128_code_test[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/ascii8_code_test" type="array">
+      <obj_property name="ElementShortName">ascii8_code_test[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ascii8_code_test[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/count_ascii" type="other">
+      <obj_property name="ElementShortName">count_ascii</obj_property>
+      <obj_property name="ObjectShortName">count_ascii</obj_property>
+   </wvobject>
+</wave_config>

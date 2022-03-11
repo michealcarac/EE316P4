@@ -50,8 +50,11 @@ signal selectMode_test : std_logic_vector(3 downto 0);
 signal clockOutput_test: std_logic;
 signal count : integer range 0 to 6 := 0;
 signal ascii_code_test : std_logic_vector(6 downto 0);
-signal ascii128_code_test: std_logic_vector(127 downto 0);
-
+signal ascii128_code_test: std_logic_vector(127 downto 0) := x"20202020202020202020202020202020";
+signal ascii8_code_test: std_logic_vector(7 downto 0);
+signal prev_ascii_new_pulse : std_logic;
+signal ascii_new_pulse : std_logic;
+signal count_ascii : integer range 0 to 127 := 127;
 begin
 
 Inst_i2c: I2C_User_LCD
@@ -70,12 +73,34 @@ Inst_keyboard: ps2_keyboard_to_ascii
             clk        => clk,
             ps2_clk    => ja(0),
             ps2_data   => ja(1),
-            ascii_new  => open,
+            ascii_new  => prev_ascii_new_pulse,
             ascii_code => ascii_code_test
 		);
 
 btn_n <= not btn(0);  -- to active low
-ascii128_code_test <= x"20202020202020" & '0' & ascii_code_test  & x"2020202020202020"; -- put keyboard input in middle of screen
+
+ascii8_code_test <= '0' & ascii_code_test; -- 7 bit to 8 bit without changing character
+
+-- Process for printing keyboard inputs to LCD, one character at a time
+process(clk)
+begin
+    if btn_n = '0' then
+        ascii128_code_test <= x"20202020202020202020202020202020";
+        count_ascii <= 127; -- count range
+    elsif rising_edge(clk) then
+        ascii_new_pulse <= prev_ascii_new_pulse;
+        if prev_ascii_new_pulse = '0' AND ascii_new_pulse = '1'  then
+            ascii128_code_test(count_ascii downto count_ascii-7) <= ascii8_code_test;
+            if count_ascii > 7 then -- 8 bits
+                count_ascii <= count_ascii - 8;
+            else
+                count_ascii <= 127; -- count range
+                ascii128_code_test <= x"20202020202020202020202020202020";
+            end if;
+        end if;
+    end if;
+end process;
+
 
 
 rising_edge_detector : process(clk)

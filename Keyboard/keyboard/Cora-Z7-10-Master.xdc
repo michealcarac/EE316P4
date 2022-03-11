@@ -4,8 +4,8 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
 ## PL System Clock
-set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports {clk_0}]
-create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports {clk_0}]
+set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports {clk}]
+create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports {clk}]
 
 ## RGB LEDs
 #set_property -dict { PACKAGE_PIN L15   IOSTANDARD LVCMOS33 } [get_ports { led0_b }]; #IO_L22N_T3_AD7N_35 Sch=led0_b
@@ -20,8 +20,8 @@ create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_p
 #set_property -dict {PACKAGE_PIN D19 IOSTANDARD LVCMOS33} [get_ports {btn[1]}]
 
 ## Pmod Header JA
-set_property -dict {PACKAGE_PIN Y18 IOSTANDARD LVCMOS33} [get_ports {ps2_clk_0}]
-set_property -dict {PACKAGE_PIN Y19 IOSTANDARD LVCMOS33} [get_ports {ps2_data_0}]
+set_property -dict {PACKAGE_PIN Y18 IOSTANDARD LVCMOS33} [get_ports {ps2_clk}]
+set_property -dict {PACKAGE_PIN Y19 IOSTANDARD LVCMOS33} [get_ports {ps2_data}]
 #set_property -dict {PACKAGE_PIN Y16 IOSTANDARD LVCMOS33} [get_ports {ja[2]}]
 #set_property -dict {PACKAGE_PIN Y17 IOSTANDARD LVCMOS33} [get_ports {ja[3]}]
 #set_property -dict {PACKAGE_PIN U18 IOSTANDARD LVCMOS33} [get_ports {ja[4]}]
@@ -149,30 +149,3 @@ set_property -dict {PACKAGE_PIN Y19 IOSTANDARD LVCMOS33} [get_ports {ps2_data_0}
 # set_property -dict { PACKAGE_PIN V20   IOSTANDARD LVCMOS33 } [get_ports { user_dio[10] }]; #IO_L16P_T2_34 Sch=user_dio[10]
 # set_property -dict { PACKAGE_PIN W20   IOSTANDARD LVCMOS33 } [get_ports { user_dio[11] }]; #IO_L16N_T2_34 Sch=user_dio[11]
 # set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { user_dio[12] }]; #IO_L10P_T1_AD11P_35 Sch=user_dio[12]
-
-set_property MARK_DEBUG true [get_nets {ascii_code[0]}]
-set_property MARK_DEBUG true [get_nets {ascii_code[1]}]
-set_property MARK_DEBUG true [get_nets {ascii_code[2]}]
-set_property MARK_DEBUG true [get_nets {ascii_code[3]}]
-set_property MARK_DEBUG true [get_nets {ascii_code[4]}]
-set_property MARK_DEBUG true [get_nets {ascii_code[5]}]
-set_property MARK_DEBUG true [get_nets {ascii_code[6]}]
-
-create_debug_core u_ila_0 ila
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property port_width 1 [get_debug_ports u_ila_0/clk]
-connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG]]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 7 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {ascii_code_test[0]} {ascii_code_test[1]} {ascii_code_test[2]} {ascii_code_test[3]} {ascii_code_test[4]} {ascii_code_test[5]} {ascii_code_test[6]}]]
-set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
-set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
-set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-connect_debug_port dbg_hub/clk [get_nets clk_IBUF_BUFG]
