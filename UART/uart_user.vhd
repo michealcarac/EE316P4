@@ -7,7 +7,7 @@ ENTITY uart_user IS
     baud_rate :  INTEGER    := 115_200;      --data link baud rate in bits/second
     os_rate   :  INTEGER    := 16;          --oversampling rate to find center of receive bits (in samples per baud period)
     d_width   :  INTEGER    := 8;           --data bus width
-    parity    :  INTEGER    := 1;           --0 for no parity, 1 for parity
+    parity    :  INTEGER    := 0;           --0 for no parity, 1 for parity
     parity_eo :  STD_LOGIC  := '0');        --'0' for even, '1' for odd parity
   PORT(
     -- IN --
@@ -19,7 +19,8 @@ ENTITY uart_user IS
     transcieve_tx :  OUT  STD_LOGIC;  -- Transmit Pin
     -- RX --
     data_o        :  OUT  STD_LOGIC_VECTOR(d_width-1 DOWNTO 0);  --data received
-    transcieve_rx :  IN   STD_LOGIC);  -- Recieve Pin 
+    transcieve_rx :  IN   STD_LOGIC;  -- Recieve Pin 
+    rx_new        :  OUT  STD_LOGIC);
 END uart_user;
     
 ARCHITECTURE logic OF uart_user IS
@@ -55,6 +56,8 @@ ARCHITECTURE logic OF uart_user IS
     signal user_rx_data : std_logic_vector(d_width-1 downto 0); -- RX Data (Recieved)
     signal user_rx_error: std_logic;  -- RX Error Flag
     signal user_rx_busy : std_logic;  -- RX Busy Flag
+    signal user_rx_busy_prev : std_logic;  -- RX Busy Flag
+    signal user_rx_new  : std_logic;
 
     -- Transciever --
     signal user_transcieve_tx : std_logic; -- Transmitter
@@ -78,12 +81,12 @@ Inst_uart_master : uart
 			    tx_data   => user_tx_data,  -- TX Data
                 tx_busy  => user_tx_busy,  -- TX Busy
           -- RX --     
-			    rx_busy   => user_rx_busy,  -- RX Busy
+			    rx_busy   => user_rx_busy_prev,  -- RX Busy
 			    rx_error  => user_rx_error, -- RX Error
 			    rx_data   => user_rx_data,  -- RX Data
           -- Transciever --               
 			    tx        => user_transcieve_tx, -- TX Pin
-                rx        => user_transcieve_rx -- RX Pin
+          rx        => user_transcieve_rx -- RX Pin
 );
 
 -- Tie ports --
@@ -91,25 +94,40 @@ Inst_uart_master : uart
 user_tx_data  <= data_i; 
 -- RX --
 data_o        <= user_rx_data;
+rx_new        <= user_rx_new;
 -- Transciever --
 transcieve_tx <= user_transcieve_tx;
 user_transcieve_rx <= transcieve_rx;
+
+
+-- Reading --
+process(clk_i)
+begin
+    if rising_edge(clk_i) then
+        user_rx_busy <= user_rx_busy_prev;
+        if user_rx_busy_prev = '0' and user_rx_busy = '1' then -- Falling edge
+            user_rx_new <= '1';
+        else
+            user_rx_new <= '0';
+        end if;
+    end if;
+end process;
 
 -- Writing --
 process(clk_i, reset_n)
 begin
     if rising_edge(clk_i) then
-        if reset_n = '0' then
+        if reset_n = '0' then   -- If Reset
             user_tx_ena <= '0';
         else
             case(next_state) is 
                 when start =>
                     next_state <= ready;
-                when ready =>
+                when ready =>   -- Stay in Ready state until EN goes high
                     if en = '0' then
                         next_state <= ready;
                     elsif en = '1' then
-                        user_tx_ena <= '1';
+                        user_tx_ena <= '1';  -- Enable UART send
                         next_state <= write_0;
                     end if;
                 when write_0 =>

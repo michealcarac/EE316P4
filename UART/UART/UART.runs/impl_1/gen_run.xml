@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1647845089">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1647902600">
   <File Type="BITSTR-BMM" Name="wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="wrapper_timing_summary_init.rpt"/>
@@ -108,6 +108,18 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../Keyboard/ps2_keyboard_to_ascii.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../I2C_LCD/i2c_user_lcd.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../I2C_LCD/I2C_Master.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

@@ -1,6 +1,8 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc rfile:../../../../Cora-Z7-10-Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports clk]
+set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L15   IOSTANDARD LVCMOS33 } [get_ports { led0_b }]; #IO_L22N_T3_AD7N_35 Sch=led0_b
 set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN D20 IOSTANDARD LVCMOS33} [get_ports { btn[0] }]
 set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]

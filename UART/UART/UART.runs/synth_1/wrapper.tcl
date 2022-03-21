@@ -17,9 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -40,6 +37,8 @@ read_vhdl -library xil_defaultlib {
   C:/Users/sixpe/Documents/EE316P4/Keyboard/debounce.vhd
   C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard.vhd
   C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd
+  C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd
+  C:/Users/sixpe/Documents/EE316P4/I2C_LCD/I2C_Master.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

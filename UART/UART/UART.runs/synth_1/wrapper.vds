@@ -2,8 +2,8 @@
 # Vivado v2019.1.3 (64-bit)
 # SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
 # IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
-# Start of session at: Mon Mar 21 02:42:55 2022
-# Process ID: 17032
+# Start of session at: Mon Mar 21 18:43:23 2022
+# Process ID: 17328
 # Current directory: C:/Users/sixpe/Documents/EE316P4/UART/UART/UART.runs/synth_1
 # Command line: vivado.exe -log wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrapper.tcl
 # Log file: C:/Users/sixpe/Documents/EE316P4/UART/UART/UART.runs/synth_1/wrapper.vds
@@ -16,14 +16,32 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19932 
+INFO: Helper process launched with PID 23764 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 817.953 ; gain = 176.031
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 818.199 ; gain = 177.812
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'wrapper' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:15]
+	Parameter input_clk bound to: 125000000 - type: integer 
+	Parameter bus_clk bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'i2c_user_lcd' declared at 'C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:6' bound to instance 'Inst_top_level' of component 'I2C_User_LCD' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'i2c_user_lcd' [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:24]
+	Parameter input_clk bound to: 125000000 - type: integer 
+	Parameter bus_clk bound to: 100000 - type: integer 
+	Parameter input_clk bound to: 125000000 - type: integer 
+	Parameter bus_clk bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'i2c_master' declared at 'C:/Users/sixpe/Documents/EE316P4/I2C_LCD/I2C_Master.vhd:36' bound to instance 'Inst_i2c_master' of component 'i2c_master' [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'i2c_master' [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/I2C_Master.vhd:54]
+	Parameter input_clk bound to: 125000000 - type: integer 
+	Parameter bus_clk bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'i2c_master' (1#1) [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/I2C_Master.vhd:54]
+WARNING: [Synth 8-614] signal 'first_line' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
+WARNING: [Synth 8-614] signal 'selectMode' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
+WARNING: [Synth 8-614] signal 'second_line' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
+WARNING: [Synth 8-614] signal 'clockOutput' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
+INFO: [Synth 8-256] done synthesizing module 'i2c_user_lcd' (2#1) [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:24]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter ps2_debounce_counter_size bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'ps2_keyboard_to_ascii' declared at 'C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:26' bound to instance 'Inst_keyboard' of component 'ps2_keyboard_to_ascii' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:64]
+INFO: [Synth 8-3491] module 'ps2_keyboard_to_ascii' declared at 'C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:26' bound to instance 'Inst_keyboard' of component 'ps2_keyboard_to_ascii' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:105]
 INFO: [Synth 8-638] synthesizing module 'ps2_keyboard_to_ascii' [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:38]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter ps2_debounce_counter_size bound to: 9 - type: integer 
@@ -37,43 +55,45 @@ INFO: [Synth 8-638] synthesizing module 'ps2_keyboard' [C:/Users/sixpe/Documents
 INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/sixpe/Documents/EE316P4/Keyboard/debounce.vhd:27' bound to instance 'debounce_ps2_clk' of component 'debounce' [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard.vhd:67]
 INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/sixpe/Documents/EE316P4/Keyboard/debounce.vhd:36]
 	Parameter counter_size bound to: 9 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'debounce' (1#1) [C:/Users/sixpe/Documents/EE316P4/Keyboard/debounce.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (3#1) [C:/Users/sixpe/Documents/EE316P4/Keyboard/debounce.vhd:36]
 	Parameter counter_size bound to: 9 - type: integer 
 INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/sixpe/Documents/EE316P4/Keyboard/debounce.vhd:27' bound to instance 'debounce_ps2_data' of component 'debounce' [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard' (2#1) [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard_to_ascii' (3#1) [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard' (4#1) [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard_to_ascii' (5#1) [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:38]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter baud_rate bound to: 115200 - type: integer 
 	Parameter os_rate bound to: 16 - type: integer 
 	Parameter d_width bound to: 8 - type: integer 
-	Parameter parity bound to: 1 - type: integer 
+	Parameter parity bound to: 0 - type: integer 
 	Parameter parity_eo bound to: 1'b0 
-INFO: [Synth 8-3491] module 'uart_user' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:4' bound to instance 'Inst_Uart' of component 'Uart_User' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'uart_user' [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:25]
+INFO: [Synth 8-3491] module 'uart_user' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:4' bound to instance 'Inst_Uart' of component 'Uart_User' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'uart_user' [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:26]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter baud_rate bound to: 115200 - type: integer 
 	Parameter os_rate bound to: 16 - type: integer 
 	Parameter d_width bound to: 8 - type: integer 
-	Parameter parity bound to: 1 - type: integer 
+	Parameter parity bound to: 0 - type: integer 
 	Parameter parity_eo bound to: 1'b0 
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter baud_rate bound to: 115200 - type: integer 
 	Parameter os_rate bound to: 16 - type: integer 
 	Parameter d_width bound to: 8 - type: integer 
-	Parameter parity bound to: 1 - type: integer 
+	Parameter parity bound to: 0 - type: integer 
 	Parameter parity_eo bound to: 1'b0 
-INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:28' bound to instance 'Inst_uart_master' of component 'uart' [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:65]
+INFO: [Synth 8-3491] module 'uart' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:28' bound to instance 'Inst_uart_master' of component 'uart' [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:68]
 INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:49]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter baud_rate bound to: 115200 - type: integer 
 	Parameter os_rate bound to: 16 - type: integer 
 	Parameter d_width bound to: 8 - type: integer 
-	Parameter parity bound to: 1 - type: integer 
+	Parameter parity bound to: 0 - type: integer 
 	Parameter parity_eo bound to: 1'b0 
 WARNING: [Synth 8-614] signal 'os_pulse' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:95]
-INFO: [Synth 8-256] done synthesizing module 'uart' (4#1) [C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:49]
-INFO: [Synth 8-256] done synthesizing module 'uart_user' (5#1) [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:25]
-INFO: [Synth 8-256] done synthesizing module 'wrapper' (6#1) [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'uart' (6#1) [C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'uart_user' (7#1) [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'wrapper' (8#1) [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:15]
+WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[3]
+WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[2]
 WARNING: [Synth 8-3331] design wrapper has unconnected port jb[7]
 WARNING: [Synth 8-3331] design wrapper has unconnected port jb[6]
 WARNING: [Synth 8-3331] design wrapper has unconnected port jb[5]
@@ -84,11 +104,9 @@ WARNING: [Synth 8-3331] design wrapper has unconnected port ja[7]
 WARNING: [Synth 8-3331] design wrapper has unconnected port ja[6]
 WARNING: [Synth 8-3331] design wrapper has unconnected port ja[5]
 WARNING: [Synth 8-3331] design wrapper has unconnected port ja[4]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[3]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[2]
 WARNING: [Synth 8-3331] design wrapper has unconnected port btn[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 882.219 ; gain = 240.297
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 882.539 ; gain = 242.152
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -101,45 +119,63 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 882.219 ; gain = 240.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 882.539 ; gain = 242.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 882.219 ; gain = 240.297
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 882.539 ; gain = 242.152
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led0_b'. [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1008.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1021.059 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1008.148 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1021.059 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1008.148 ; gain = 366.227
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1021.059 ; gain = 380.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1008.148 ; gain = 366.227
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1021.059 ; gain = 380.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1008.148 ; gain = 366.227
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1021.059 ; gain = 380.672
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ps2_keyboard_to_ascii'
 INFO: [Synth 8-5546] ROM "ascii" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'next_state_reg' in module 'uart_user'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   ready |                        000000001 |                             0000
+                   start |                        000000010 |                             0001
+                 command |                        000000100 |                             0010
+                slv_ack1 |                        000001000 |                             0011
+                      wr |                        000010000 |                             0100
+                slv_ack2 |                        000100000 |                             0110
+                      rd |                        001000000 |                             0101
+                mstr_ack |                        010000000 |                             0111
+                    stop |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'i2c_master'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -158,7 +194,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'next_state_reg' using encoding 'sequential' in module 'uart_user'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1008.148 ; gain = 366.227
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1021.059 ; gain = 380.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -171,44 +207,83 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     11 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 2     
 	   2 Input      7 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 2     
-	   9 Input      1 Bit         XORs := 2     
-	   8 Input      1 Bit         XORs := 1     
+	   9 Input      1 Bit         XORs := 1     
 +---Registers : 
+	               32 Bit    Registers := 2     
 	               11 Bit    Registers := 3     
 	               10 Bit    Registers := 3     
-	                8 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 23    
 	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
-	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 23    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 38    
 +---Muxes : 
+	   4 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input    120 Bit        Muxes := 1     
+	   4 Input    112 Bit        Muxes := 1     
+	   4 Input    104 Bit        Muxes := 1     
+	   4 Input     96 Bit        Muxes := 1     
+	   4 Input     88 Bit        Muxes := 1     
+	   4 Input     80 Bit        Muxes := 1     
+	   4 Input     72 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   4 Input     56 Bit        Muxes := 1     
+	   4 Input     48 Bit        Muxes := 1     
+	   4 Input     40 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   4 Input     24 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 2     
-	   2 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 10    
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 16    
+	   4 Input      8 Bit        Muxes := 3     
 	   3 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 11    
 	  22 Input      8 Bit        Muxes := 4     
 	  35 Input      8 Bit        Muxes := 1     
 	   7 Input      8 Bit        Muxes := 1     
 	  27 Input      8 Bit        Muxes := 2     
-	   4 Input      8 Bit        Muxes := 2     
 	  34 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 2     
+	   9 Input      3 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
 	  33 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
 	   3 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 32    
+	   3 Input      1 Bit        Muxes := 23    
+	   9 Input      1 Bit        Muxes := 7     
+	   6 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 22    
-	   3 Input      1 Bit        Muxes := 6     
-	   4 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -218,8 +293,80 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module wrapper 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
+	                8 Bit    Registers := 16    
+	                5 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 16    
+Module i2c_master 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 9     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 7     
+	   6 Input      1 Bit        Muxes := 3     
+Module i2c_user_lcd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input    120 Bit        Muxes := 1     
+	   4 Input    112 Bit        Muxes := 1     
+	   4 Input    104 Bit        Muxes := 1     
+	   4 Input     96 Bit        Muxes := 1     
+	   4 Input     88 Bit        Muxes := 1     
+	   4 Input     80 Bit        Muxes := 1     
+	   4 Input     72 Bit        Muxes := 1     
+	   4 Input     64 Bit        Muxes := 1     
+	   4 Input     56 Bit        Muxes := 1     
+	   4 Input     48 Bit        Muxes := 1     
+	   4 Input     40 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 1     
+	   4 Input     24 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+	   7 Input      1 Bit        Muxes := 6     
+	   8 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 1     
 Module debounce 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -270,26 +417,25 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input      7 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 4     
-+---XORs : 
-	   9 Input      1 Bit         XORs := 1     
-	   8 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               11 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
 	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input     11 Bit        Muxes := 2     
-	   2 Input     10 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 12    
 Module uart_user 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
@@ -310,6 +456,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[3]
+WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[2]
 WARNING: [Synth 8-3331] design wrapper has unconnected port jb[7]
 WARNING: [Synth 8-3331] design wrapper has unconnected port jb[6]
 WARNING: [Synth 8-3331] design wrapper has unconnected port jb[5]
@@ -320,11 +468,42 @@ WARNING: [Synth 8-3331] design wrapper has unconnected port ja[7]
 WARNING: [Synth 8-3331] design wrapper has unconnected port ja[6]
 WARNING: [Synth 8-3331] design wrapper has unconnected port ja[5]
 WARNING: [Synth 8-3331] design wrapper has unconnected port ja[4]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[3]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[2]
 WARNING: [Synth 8-3331] design wrapper has unconnected port btn[1]
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[0]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[1]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[2]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[3]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[15]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[4]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[5]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[8]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Inst_top_level/lcd_delay_cnst_reg[6] )
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[9]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[10]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[17]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[11]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[16]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[17]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[23]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[18]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[20]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[20]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[21]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[21]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[22]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[22]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[24]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[23]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[25]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[25]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[26]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[26]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[27]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[27]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[28]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[28]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[29]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[29]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[30]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[30]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_top_level/lcd_delay_cnst_reg[31] )
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/data_tx_reg[3]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/data_tx_reg[1]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[6]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[7]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[0]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[0]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[4]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[1]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[2]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[2]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Inst_top_level/Inst_i2c_master/addr_rw_reg[3] )
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[4]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_top_level/Inst_i2c_master/addr_rw_reg[5] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1008.148 ; gain = 366.227
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1021.059 ; gain = 380.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -336,13 +515,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1008.148 ; gain = 366.227
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.059 ; gain = 380.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1011.895 ; gain = 369.973
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1036.898 ; gain = 396.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,8 +532,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (Inst_top_level/Inst_i2c_master/FSM_onehot_state_reg[7]) is unused and will be removed from module wrapper.
+WARNING: [Synth 8-3332] Sequential element (Inst_top_level/Inst_i2c_master/FSM_onehot_state_reg[6]) is unused and will be removed from module wrapper.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1020.980 ; gain = 379.059
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -378,7 +559,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -391,7 +572,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -403,25 +584,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -438,56 +619,62 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     4|
-|3     |LUT1   |     7|
-|4     |LUT2   |    15|
-|5     |LUT3   |    18|
-|6     |LUT4   |    32|
-|7     |LUT5   |    20|
-|8     |LUT6   |    86|
-|9     |MUXF7  |    15|
-|10    |MUXF8  |     2|
-|11    |FDCE   |    17|
-|12    |FDPE   |     2|
-|13    |FDRE   |   103|
-|14    |IBUF   |     4|
-|15    |OBUF   |     1|
+|2     |CARRY4 |    19|
+|3     |LUT1   |    15|
+|4     |LUT2   |    74|
+|5     |LUT3   |    42|
+|6     |LUT4   |    70|
+|7     |LUT5   |    45|
+|8     |LUT6   |   194|
+|9     |MUXF7  |    24|
+|10    |MUXF8  |     4|
+|11    |FDCE   |    62|
+|12    |FDPE   |     8|
+|13    |FDRE   |   295|
+|14    |FDSE   |    16|
+|15    |IBUF   |     5|
+|16    |IOBUF  |     1|
+|17    |OBUF   |     1|
+|18    |OBUFT  |     1|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+------------------------+----------------------+------+
 |      |Instance                |Module                |Cells |
 +------+------------------------+----------------------+------+
-|1     |top                     |                      |   327|
-|2     |  Inst_Uart             |uart_user             |    74|
-|3     |    Inst_uart_master    |uart                  |    70|
-|4     |  Inst_keyboard         |ps2_keyboard_to_ascii |   245|
-|5     |    ps2_keyboard_0      |ps2_keyboard          |   214|
+|1     |top                     |                      |   877|
+|2     |  Inst_Uart             |uart_user             |   152|
+|3     |    Inst_uart_master    |uart                  |   126|
+|4     |  Inst_keyboard         |ps2_keyboard_to_ascii |   247|
+|5     |    ps2_keyboard_0      |ps2_keyboard          |   218|
 |6     |      debounce_ps2_clk  |debounce              |    28|
 |7     |      debounce_ps2_data |debounce_0            |    27|
+|8     |  Inst_top_level        |i2c_user_lcd          |   329|
+|9     |    Inst_i2c_master     |i2c_master            |   176|
 +------+------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 1021.770 ; gain = 253.918
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1021.770 ; gain = 379.848
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1045.934 ; gain = 267.027
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1045.934 ; gain = 405.547
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1026.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1045.934 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-35 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+76 Infos, 34 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:00 . Memory (MB): peak = 1026.449 ; gain = 647.621
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1026.449 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 1045.934 ; gain = 667.660
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1045.934 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/sixpe/Documents/EE316P4/UART/UART/UART.runs/synth_1/wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file wrapper_utilization_synth.rpt -pb wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 21 02:44:03 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 21 18:44:35 2022...
