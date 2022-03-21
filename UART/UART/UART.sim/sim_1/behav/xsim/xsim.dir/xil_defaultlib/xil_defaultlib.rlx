@@ -1,0 +1,11 @@
+0.6
+2019.1
+Sep  4 2019
+09:57:52
+C:/Users/sixpe/Documents/EE316P4/Keyboard/debounce.vhd,1646962720,vhdl,,,,debounce,,,,,,,,
+C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard.vhd,1646962721,vhdl,,,,ps2_keyboard,,,,,,,,
+C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd,1646962721,vhdl,,,,ps2_keyboard_to_ascii,,,,,,,,
+C:/Users/sixpe/Documents/EE316P4/UART/Common.vhd,1647841650,vhdl,C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd,,,common,,,,,,,,
+C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd,1647844225,vhdl,,,,wrapper,,,,,,,,
+C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd,1646975920,vhdl,,,,uart,,,,,,,,
+C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd,1647843173,vhdl,,,,uart_user,,,,,,,,

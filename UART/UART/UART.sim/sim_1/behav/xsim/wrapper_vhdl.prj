@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Common.vhd" \
+"../../../../../uart.vhd" \
+"../../../../../uart_user.vhd" \
+"../../../../../cora_wrapper.vhd" \
+"../../../../../../Keyboard/debounce.vhd" \
+"../../../../../../Keyboard/ps2_keyboard.vhd" \
+"../../../../../../Keyboard/ps2_keyboard_to_ascii.vhd" \
+
+# Do not sort compile order
+nosort

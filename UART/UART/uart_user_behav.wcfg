@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="common" />
+            <top_module name="wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="569000000001fs"></ZoomEndTime>
+      <Cursor1Time time="202000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="187"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/wrapper/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/btn_n" type="logic">
+      <obj_property name="ElementShortName">btn_n</obj_property>
+      <obj_property name="ObjectShortName">btn_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/prev_ascii_new_pulse" type="logic">
+      <obj_property name="ElementShortName">prev_ascii_new_pulse</obj_property>
+      <obj_property name="ObjectShortName">prev_ascii_new_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/ascii_new_pulse" type="logic">
+      <obj_property name="ElementShortName">ascii_new_pulse</obj_property>
+      <obj_property name="ObjectShortName">ascii_new_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/uart_en" type="logic">
+      <obj_property name="ElementShortName">uart_en</obj_property>
+      <obj_property name="ObjectShortName">uart_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/ascii_code" type="array">
+      <obj_property name="ElementShortName">ascii_code[6:0]</obj_property>
+      <obj_property name="ObjectShortName">ascii_code[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/uart_data" type="array">
+      <obj_property name="ElementShortName">uart_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/Inst_Uart/transcieve_tx" type="logic">
+      <obj_property name="ElementShortName">transcieve_tx</obj_property>
+      <obj_property name="ObjectShortName">transcieve_tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/Inst_Uart/transcieve_rx" type="logic">
+      <obj_property name="ElementShortName">transcieve_rx</obj_property>
+      <obj_property name="ObjectShortName">transcieve_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/Inst_Uart/data_i" type="array">
+      <obj_property name="ElementShortName">data_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/Inst_Uart/user_tx_data" type="array">
+      <obj_property name="ElementShortName">user_tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">user_tx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/Inst_Uart/user_tx_ena" type="logic">
+      <obj_property name="ElementShortName">user_tx_ena</obj_property>
+      <obj_property name="ObjectShortName">user_tx_ena</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/Inst_Uart/user_tx_busy" type="logic">
+      <obj_property name="ElementShortName">user_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">user_tx_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wrapper/Inst_Uart/next_state" type="other">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+</wave_config>
