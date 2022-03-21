@@ -1,6 +1,6 @@
 # references
-# https://github.com/openethereum/wordlist
-# https://github.com/carlmas02/Hangman-Game/blob/main/main.py
+# https://github.com/openethereum/wordlist , the wordlist for the game
+# https://github.com/carlmas02/Hangman-Game/blob/main/main.py , used for hangman images
 
 import tkinter
 from tkinter import *
