@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1647902600">
-  <File Type="BITSTR-BMM" Name="wrapper_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="wrapper_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="wrapper_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="wrapper_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="wrapper_reports.tcl"/>
-  <File Type="OPT-DRC" Name="wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="wrapper.hwdef"/>
-  <File Type="PWROPT-DCP" Name="wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="wrapper_placed.dcp"/>
-  <File Type="PLACE-IO" Name="wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="wrapper.bgn"/>
-  <File Type="PLACE-TIMING" Name="wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="wrapper_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="wrapper.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="wrapper.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="wrapper_drc_routed.pb"/>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1647976784">
+  <File Type="BITSTR-BMM" Name="top_level_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="top_level_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="top_level_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="top_level_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="top_level.tcl"/>
+  <File Type="OPT-TIMING" Name="top_level_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="top_level_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="top_level_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="top_level_reports.tcl"/>
+  <File Type="OPT-DRC" Name="top_level_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="top_level.hwdef"/>
+  <File Type="PWROPT-DCP" Name="top_level_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="top_level_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="top_level_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="top_level_placed.dcp"/>
+  <File Type="PLACE-IO" Name="top_level_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="top_level_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="top_level_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="top_level_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="top_level_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="top_level_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="top_level_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="top_level.bgn"/>
+  <File Type="PLACE-TIMING" Name="top_level_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="top_level_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="top_level.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="top_level_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="top_level_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="top_level_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="top_level.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="top_level_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="top_level_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="top_level_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="top_level_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="top_level_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="top_level_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="wrapper.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="wrapper_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="wrapper.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="wrapper.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="wrapper_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="wrapper_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="wrapper.nky"/>
-  <File Type="BG-DRC" Name="wrapper.drc"/>
-  <File Type="RDI-RDI" Name="wrapper.vdi"/>
+  <File Type="BITSTR-LTX" Name="top_level.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="top_level_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="top_level.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_level_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_level_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="top_level.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_level_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="top_level_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="top_level_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="top_level_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="top_level_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="top_level_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="top_level_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="top_level_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="top_level_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="top_level_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="top_level_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="top_level_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_level_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_level_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="top_level_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="top_level_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="top_level_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="top_level_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="top_level_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="top_level.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="top_level_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="top_level.rbt"/>
+  <File Type="BITSTR-NKY" Name="top_level.nky"/>
+  <File Type="BG-DRC" Name="top_level.drc"/>
+  <File Type="RDI-RDI" Name="top_level.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -84,12 +84,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../uart_user.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../cora_wrapper.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -113,13 +107,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../I2C_LCD/i2c_user_lcd.vhd">
+    <File Path="$PPRDIR/../i2c_user_lcd.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../I2C_LCD/I2C_Master.vhd">
+    <File Path="$PPRDIR/../top_level.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../I2C_Master.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -127,8 +127,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="top_level"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

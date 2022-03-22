@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrapper.tcl
+    with args -log top_level.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level.tcl
 
 
 ****** Vivado v2019.1.3 (64-bit)
@@ -8,39 +8,38 @@
   **** IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source wrapper.tcl -notrace
-Command: synth_design -top wrapper -part xc7z010clg400-1
+source top_level.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 378.297 ; gain = 83.844
+Command: synth_design -top top_level -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23764 
+INFO: Helper process launched with PID 28768 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 818.199 ; gain = 177.812
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 818.582 ; gain = 177.312
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'wrapper' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'top_level' [C:/Users/sixpe/Documents/EE316P4/UART/top_level.vhd:15]
 	Parameter input_clk bound to: 125000000 - type: integer 
 	Parameter bus_clk bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'i2c_user_lcd' declared at 'C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:6' bound to instance 'Inst_top_level' of component 'I2C_User_LCD' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:94]
-INFO: [Synth 8-638] synthesizing module 'i2c_user_lcd' [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:24]
+INFO: [Synth 8-3491] module 'i2c_user_lcd' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/i2c_user_lcd.vhd:6' bound to instance 'Inst_top_level' of component 'I2C_User_LCD' [C:/Users/sixpe/Documents/EE316P4/UART/top_level.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'i2c_user_lcd' [C:/Users/sixpe/Documents/EE316P4/UART/i2c_user_lcd.vhd:22]
 	Parameter input_clk bound to: 125000000 - type: integer 
 	Parameter bus_clk bound to: 100000 - type: integer 
 	Parameter input_clk bound to: 125000000 - type: integer 
 	Parameter bus_clk bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'i2c_master' declared at 'C:/Users/sixpe/Documents/EE316P4/I2C_LCD/I2C_Master.vhd:36' bound to instance 'Inst_i2c_master' of component 'i2c_master' [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:84]
-INFO: [Synth 8-638] synthesizing module 'i2c_master' [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/I2C_Master.vhd:54]
+INFO: [Synth 8-3491] module 'i2c_master' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/I2C_Master.vhd:36' bound to instance 'Inst_i2c_master' of component 'i2c_master' [C:/Users/sixpe/Documents/EE316P4/UART/i2c_user_lcd.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'i2c_master' [C:/Users/sixpe/Documents/EE316P4/UART/I2C_Master.vhd:54]
 	Parameter input_clk bound to: 125000000 - type: integer 
 	Parameter bus_clk bound to: 100000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'i2c_master' (1#1) [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/I2C_Master.vhd:54]
-WARNING: [Synth 8-614] signal 'first_line' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
-WARNING: [Synth 8-614] signal 'selectMode' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
-WARNING: [Synth 8-614] signal 'second_line' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
-WARNING: [Synth 8-614] signal 'clockOutput' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:219]
-INFO: [Synth 8-256] done synthesizing module 'i2c_user_lcd' (2#1) [C:/Users/sixpe/Documents/EE316P4/I2C_LCD/i2c_user_lcd.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'i2c_master' (1#1) [C:/Users/sixpe/Documents/EE316P4/UART/I2C_Master.vhd:54]
+WARNING: [Synth 8-614] signal 'first_line' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/UART/i2c_user_lcd.vhd:187]
+WARNING: [Synth 8-614] signal 'second_line' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/UART/i2c_user_lcd.vhd:187]
+INFO: [Synth 8-256] done synthesizing module 'i2c_user_lcd' (2#1) [C:/Users/sixpe/Documents/EE316P4/UART/i2c_user_lcd.vhd:22]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter ps2_debounce_counter_size bound to: 9 - type: integer 
-INFO: [Synth 8-3491] module 'ps2_keyboard_to_ascii' declared at 'C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:26' bound to instance 'Inst_keyboard' of component 'ps2_keyboard_to_ascii' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:105]
+INFO: [Synth 8-3491] module 'ps2_keyboard_to_ascii' declared at 'C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:26' bound to instance 'Inst_keyboard' of component 'ps2_keyboard_to_ascii' [C:/Users/sixpe/Documents/EE316P4/UART/top_level.vhd:104]
 INFO: [Synth 8-638] synthesizing module 'ps2_keyboard_to_ascii' [C:/Users/sixpe/Documents/EE316P4/Keyboard/ps2_keyboard_to_ascii.vhd:38]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter ps2_debounce_counter_size bound to: 9 - type: integer 
@@ -65,7 +64,7 @@ INFO: [Synth 8-256] done synthesizing module 'ps2_keyboard_to_ascii' (5#1) [C:/U
 	Parameter d_width bound to: 8 - type: integer 
 	Parameter parity bound to: 0 - type: integer 
 	Parameter parity_eo bound to: 1'b0 
-INFO: [Synth 8-3491] module 'uart_user' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:4' bound to instance 'Inst_Uart' of component 'Uart_User' [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:114]
+INFO: [Synth 8-3491] module 'uart_user' declared at 'C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:4' bound to instance 'Inst_Uart' of component 'Uart_User' [C:/Users/sixpe/Documents/EE316P4/UART/top_level.vhd:113]
 INFO: [Synth 8-638] synthesizing module 'uart_user' [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:26]
 	Parameter clk_freq bound to: 125000000 - type: integer 
 	Parameter baud_rate bound to: 115200 - type: integer 
@@ -90,22 +89,20 @@ INFO: [Synth 8-638] synthesizing module 'uart' [C:/Users/sixpe/Documents/EE316P4
 WARNING: [Synth 8-614] signal 'os_pulse' is read in the process but is not in the sensitivity list [C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:95]
 INFO: [Synth 8-256] done synthesizing module 'uart' (6#1) [C:/Users/sixpe/Documents/EE316P4/UART/uart.vhd:49]
 INFO: [Synth 8-256] done synthesizing module 'uart_user' (7#1) [C:/Users/sixpe/Documents/EE316P4/UART/uart_user.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'wrapper' (8#1) [C:/Users/sixpe/Documents/EE316P4/UART/cora_wrapper.vhd:15]
-WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[3]
-WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[2]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[7]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[6]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[5]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[4]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[3]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[2]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[7]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[6]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[5]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[4]
-WARNING: [Synth 8-3331] design wrapper has unconnected port btn[1]
+INFO: [Synth 8-256] done synthesizing module 'top_level' (8#1) [C:/Users/sixpe/Documents/EE316P4/UART/top_level.vhd:15]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[7]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[6]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[5]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[4]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[3]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[2]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[7]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[6]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[5]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[4]
+WARNING: [Synth 8-3331] design top_level has unconnected port btn[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 882.539 ; gain = 242.152
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 883.090 ; gain = 241.820
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -118,44 +115,41 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 882.539 ; gain = 242.152
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 883.090 ; gain = 241.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 882.539 ; gain = 242.152
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 883.090 ; gain = 241.820
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'led0_b'. [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sixpe/Documents/EE316P4/UART/Cora-Z7-10-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1021.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1013.973 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1021.059 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1013.973 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1021.059 ; gain = 380.672
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1013.973 ; gain = 372.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1021.059 ; gain = 380.672
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1013.973 ; gain = 372.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1021.059 ; gain = 380.672
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1013.973 ; gain = 372.703
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ps2_keyboard_to_ascii'
@@ -193,7 +187,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'next_state_reg' using encoding 'sequential' in module 'uart_user'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1021.059 ; gain = 380.672
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1013.973 ; gain = 372.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,8 +204,7 @@ Detailed RTL Component Info :
 	   2 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 2     
 	   2 Input      7 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 5     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
@@ -223,49 +216,31 @@ Detailed RTL Component Info :
 	               11 Bit    Registers := 3     
 	               10 Bit    Registers := 3     
 	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 23    
+	                8 Bit    Registers := 39    
 	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 1     
-	                5 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
 	                4 Bit    Registers := 3     
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 4     
 	                1 Bit    Registers := 38    
 +---Muxes : 
-	   4 Input    128 Bit        Muxes := 1     
-	   2 Input    128 Bit        Muxes := 1     
-	   4 Input    120 Bit        Muxes := 1     
-	   4 Input    112 Bit        Muxes := 1     
-	   4 Input    104 Bit        Muxes := 1     
-	   4 Input     96 Bit        Muxes := 1     
-	   4 Input     88 Bit        Muxes := 1     
-	   4 Input     80 Bit        Muxes := 1     
-	   4 Input     72 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   4 Input     56 Bit        Muxes := 1     
-	   4 Input     48 Bit        Muxes := 1     
-	   4 Input     40 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     31 Bit        Muxes := 1     
-	   4 Input     24 Bit        Muxes := 1     
-	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 3     
 	   9 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 10    
 	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 16    
-	   4 Input      8 Bit        Muxes := 3     
 	   3 Input      8 Bit        Muxes := 1     
 	  22 Input      8 Bit        Muxes := 4     
 	  35 Input      8 Bit        Muxes := 1     
 	   7 Input      8 Bit        Muxes := 1     
 	  27 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 2     
 	  34 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 2     
-	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 4     
 	   2 Input      4 Bit        Muxes := 6     
 	   2 Input      3 Bit        Muxes := 2     
 	   9 Input      3 Bit        Muxes := 1     
@@ -276,7 +251,7 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 10    
 	   2 Input      1 Bit        Muxes := 32    
-	   3 Input      1 Bit        Muxes := 23    
+	   3 Input      1 Bit        Muxes := 39    
 	   9 Input      1 Bit        Muxes := 7     
 	   6 Input      1 Bit        Muxes := 3     
 	   7 Input      1 Bit        Muxes := 6     
@@ -290,18 +265,18 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module wrapper 
+Module top_level 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      5 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 16    
-	                5 Bit    Registers := 1     
+	                8 Bit    Registers := 32    
+	                6 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	   3 Input      1 Bit        Muxes := 16    
+	   2 Input      6 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 32    
 Module i2c_master 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -338,25 +313,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 5     
 +---Muxes : 
-	   4 Input    128 Bit        Muxes := 1     
-	   2 Input    128 Bit        Muxes := 1     
-	   4 Input    120 Bit        Muxes := 1     
-	   4 Input    112 Bit        Muxes := 1     
-	   4 Input    104 Bit        Muxes := 1     
-	   4 Input     96 Bit        Muxes := 1     
-	   4 Input     88 Bit        Muxes := 1     
-	   4 Input     80 Bit        Muxes := 1     
-	   4 Input     72 Bit        Muxes := 1     
-	   4 Input     64 Bit        Muxes := 1     
-	   4 Input     56 Bit        Muxes := 1     
-	   4 Input     48 Bit        Muxes := 1     
-	   4 Input     40 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     31 Bit        Muxes := 1     
-	   4 Input     24 Bit        Muxes := 1     
-	   4 Input     16 Bit        Muxes := 1     
-	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 1     
@@ -455,19 +413,17 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[3]
-WARNING: [Synth 8-3331] design i2c_user_lcd has unconnected port selectMode[2]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[7]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[6]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[5]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[4]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[3]
-WARNING: [Synth 8-3331] design wrapper has unconnected port jb[2]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[7]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[6]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[5]
-WARNING: [Synth 8-3331] design wrapper has unconnected port ja[4]
-WARNING: [Synth 8-3331] design wrapper has unconnected port btn[1]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[7]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[6]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[5]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[4]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[3]
+WARNING: [Synth 8-3331] design top_level has unconnected port jb[2]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[7]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[6]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[5]
+WARNING: [Synth 8-3331] design top_level has unconnected port ja[4]
+WARNING: [Synth 8-3331] design top_level has unconnected port btn[1]
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[0]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[1]'
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[1]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[9]'
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[2]' (FDE) to 'Inst_top_level/lcd_delay_cnst_reg[4]'
@@ -493,16 +449,16 @@ INFO: [Synth 8-3886] merging instance 'Inst_top_level/lcd_delay_cnst_reg[30]' (F
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_top_level/lcd_delay_cnst_reg[31] )
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/data_tx_reg[3]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[1]'
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/data_tx_reg[1]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[0]'
-INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[6]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[1]'
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[5]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[7]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[0]'
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[0]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_top_level/Inst_i2c_master/addr_rw_reg[4] )
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[1]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[2]'
 INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[2]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[3]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Inst_top_level/Inst_i2c_master/addr_rw_reg[3] )
-INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[4]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Inst_top_level/Inst_i2c_master/addr_rw_reg[5] )
+INFO: [Synth 8-3886] merging instance 'Inst_top_level/Inst_i2c_master/addr_rw_reg[3]' (FDE) to 'Inst_top_level/Inst_i2c_master/addr_rw_reg[6]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Inst_top_level/Inst_i2c_master/addr_rw_reg[6] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1021.059 ; gain = 380.672
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1013.973 ; gain = 372.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -514,13 +470,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.059 ; gain = 380.672
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 1013.973 ; gain = 372.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1036.898 ; gain = 396.512
+Finished Timing Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1027.887 ; gain = 386.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -531,10 +487,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (Inst_top_level/Inst_i2c_master/FSM_onehot_state_reg[7]) is unused and will be removed from module wrapper.
-WARNING: [Synth 8-3332] Sequential element (Inst_top_level/Inst_i2c_master/FSM_onehot_state_reg[6]) is unused and will be removed from module wrapper.
+WARNING: [Synth 8-3332] Sequential element (Inst_top_level/Inst_i2c_master/FSM_onehot_state_reg[7]) is unused and will be removed from module top_level.
+WARNING: [Synth 8-3332] Sequential element (Inst_top_level/Inst_i2c_master/FSM_onehot_state_reg[6]) is unused and will be removed from module top_level.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 1036.949 ; gain = 395.680
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -558,7 +514,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1038.762 ; gain = 397.492
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -571,7 +527,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1038.762 ; gain = 397.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -583,25 +539,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 1038.762 ; gain = 397.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 1038.762 ; gain = 397.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 1038.762 ; gain = 397.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 1038.762 ; gain = 397.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -619,18 +575,18 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    19|
-|3     |LUT1   |    15|
-|4     |LUT2   |    74|
-|5     |LUT3   |    42|
-|6     |LUT4   |    70|
-|7     |LUT5   |    45|
-|8     |LUT6   |   194|
-|9     |MUXF7  |    24|
-|10    |MUXF8  |     4|
+|3     |LUT1   |    14|
+|4     |LUT2   |    83|
+|5     |LUT3   |    45|
+|6     |LUT4   |    65|
+|7     |LUT5   |    53|
+|8     |LUT6   |   252|
+|9     |MUXF7  |    21|
+|10    |MUXF8  |     5|
 |11    |FDCE   |    62|
 |12    |FDPE   |     8|
-|13    |FDRE   |   295|
-|14    |FDSE   |    16|
+|13    |FDRE   |   408|
+|14    |FDSE   |    32|
 |15    |IBUF   |     5|
 |16    |IOBUF  |     1|
 |17    |OBUF   |     1|
@@ -641,39 +597,39 @@ Report Instance Areas:
 +------+------------------------+----------------------+------+
 |      |Instance                |Module                |Cells |
 +------+------------------------+----------------------+------+
-|1     |top                     |                      |   877|
-|2     |  Inst_Uart             |uart_user             |   152|
+|1     |top                     |                      |  1076|
+|2     |  Inst_Uart             |uart_user             |   169|
 |3     |    Inst_uart_master    |uart                  |   126|
 |4     |  Inst_keyboard         |ps2_keyboard_to_ascii |   247|
 |5     |    ps2_keyboard_0      |ps2_keyboard          |   218|
 |6     |      debounce_ps2_clk  |debounce              |    28|
 |7     |      debounce_ps2_data |debounce_0            |    27|
-|8     |  Inst_top_level        |i2c_user_lcd          |   329|
-|9     |    Inst_i2c_master     |i2c_master            |   176|
+|8     |  Inst_top_level        |i2c_user_lcd          |   374|
+|9     |    Inst_i2c_master     |i2c_master            |   217|
 +------+------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:22 . Memory (MB): peak = 1038.762 ; gain = 397.492
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1045.934 ; gain = 267.027
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1045.934 ; gain = 405.547
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:14 . Memory (MB): peak = 1038.762 ; gain = 266.609
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 1038.762 ; gain = 397.492
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1045.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1039.031 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-76 Infos, 34 Warnings, 1 Critical Warnings and 0 Errors encountered.
+76 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 1045.934 ; gain = 667.660
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1045.934 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:50 . Memory (MB): peak = 1039.031 ; gain = 660.734
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1039.031 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/sixpe/Documents/EE316P4/UART/UART/UART.runs/synth_1/wrapper.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file wrapper_utilization_synth.rpt -pb wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 21 18:44:35 2022...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sixpe/Documents/EE316P4/UART/UART/UART.runs/synth_1/top_level.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_utilization_synth.rpt -pb top_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 22 15:21:56 2022...
