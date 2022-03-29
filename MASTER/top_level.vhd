@@ -145,7 +145,7 @@ process (clk)
 begin
     if rising_edge(clk) then
         if btn_n = '0' then 
-            UART_Buffer <= (x"20",x"20",x"20",x"20",x"20",x"20",x"20",x"20"
+            UART_Buffer <= (x"20",x"20",x"20",x"20",x"20",x"20",x"20",x"20" -- Reset Buffer
                             ,x"20",x"20",x"20",x"20",x"20",x"20",x"20",x"20"
                             ,x"20",x"20",x"20",x"20",x"20",x"20",x"20",x"20"
                             ,x"20",x"20",x"20",x"20",x"20",x"20",x"20",x"20");

@@ -1,4 +1,4 @@
--- This package is a collection of constants used throughout Project 3.
+-- This package is a collection of constants used throughout Project 4.
 -- Using a package like this, global constants can be changed all from
 -- one location.
 --
@@ -19,7 +19,7 @@ package Common is
   constant UART_parity        : integer := 0;                  -- 0 for no parity, 1 for parity
   constant UART_parity_eo     : std_logic := '0';              -- '0' for even, '1' for odd parity
   constant PS2_DEBOUNCE_SIZE  : integer := 9;                  -- set such that 2^size/clk_freq = 5us (size = 8 for 50MHz) ?
-  constant LCD_BUS_CLK        : integer := 100_000;                        -- lcd clock speed
+  constant LCD_BUS_CLK        : integer := 100_000;            -- lcd clock speed
 end Common;
 
 package body Common is

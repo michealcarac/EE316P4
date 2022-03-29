@@ -105,7 +105,7 @@ process(clk_i)
 begin
     if rising_edge(clk_i) then
         user_rx_busy <= user_rx_busy_prev;
-        if user_rx_busy_prev = '0' and user_rx_busy = '1' then -- Falling edge
+        if user_rx_busy_prev = '0' and user_rx_busy = '1' then -- Rising edge
             user_rx_new <= '1';
         else
             user_rx_new <= '0';
